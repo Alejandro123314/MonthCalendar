@@ -3,6 +3,8 @@ package dad.calendario;
 import java.io.IOException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Year;
 import java.util.Date;
 import java.util.ResourceBundle;
 
@@ -50,13 +52,36 @@ public class MonthCalendar extends GridPane implements Initializable {
 		int fila = 2;
 		
 		getChildren().clear();
-		add(new Label("L"), 0, 1);
-		add(new Label("M"), 1, 1);
-		add(new Label("X"), 2, 1);
-		add(new Label("J"), 3, 1);
-		add(new Label("V"), 4, 1);
-		add(new Label("S"), 5, 1);
-		add(new Label("D"), 6, 1);
+		
+		Label l = new Label("L");
+		l.getStyleClass().add("weekday");
+		
+		Label m = new Label("M");
+		m.getStyleClass().add("weekday");
+		
+		Label x = new Label("X");
+		x.getStyleClass().add("weekday");
+		
+		Label j1 = new Label("J");
+		j1.getStyleClass().add("weekday");
+		
+		Label v = new Label("V");
+		v.getStyleClass().add("weekday");
+		
+		Label s = new Label("S");
+		s.getStyleClass().add("weekday");
+		
+		Label d = new Label("D");
+		d.getStyleClass().addAll("weekday","sunday");
+		
+		
+		add(l, 0, 1);
+		add(m, 1, 1);
+		add(x, 2, 1);
+		add(j1, 3, 1);
+		add(v, 4, 1);
+		add(s, 5, 1);
+		add(d, 6, 1);
 		
 		for(int i = 0, j = 1; i < ultimoDia; i++, j++, primerDia++) {
 
@@ -64,7 +89,19 @@ public class MonthCalendar extends GridPane implements Initializable {
 			if(col == 0) {
 				fila++;
 			}
-			add(new Label(j+""), col, fila);
+			
+			Label dia = new Label(j+"");
+			dia.getStyleClass().add("day");
+			
+			if(col==6) {
+				dia.getStyleClass().add("sunday");
+			}
+			
+			if(LocalDate.of(anio.get(), mes.get(), j).equals(LocalDate.now())) {
+				dia.getStyleClass().add("today");
+			}
+			
+			add(dia, col, fila);
 		}
 
 		Date date = DiasCalendar.crearFecha(getAnio(), getMes(), 1);

@@ -27,14 +27,14 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label text="L" GridPane.rowIndex="1" />
-      <Label text="M" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Label text="X" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-      <Label text="J" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-      <Label text="V" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-      <Label text="S" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-      <Label text="D" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-      <Label fx:id="month" text="label" GridPane.columnIndex="3" />
+      <Label styleClass="weekday" text="L" GridPane.rowIndex="1" />
+      <Label styleClass="weekday" text="M" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Label styleClass="weekday" text="X" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Label styleClass="weekday" text="J" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <Label styleClass="weekday" text="V" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+      <Label styleClass="weekday" text="S" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+      <Label styleClass="weekday" text="D" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+      <Label fx:id="month" styleClass="month" text="label" GridPane.columnIndex="3" />
    </children>
    <padding>
       <Insets top="50.0" />

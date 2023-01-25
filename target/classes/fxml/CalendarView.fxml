@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
 <BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <GridPane fx:id="mesGridPane" minHeight="0.0" minWidth="0.0" BorderPane.alignment="CENTER">
@@ -28,13 +27,13 @@
    <top>
       <BorderPane BorderPane.alignment="CENTER">
          <center>
-            <Label fx:id="anioLabel" text="Label" BorderPane.alignment="CENTER" />
+            <Label fx:id="anioLabel" styleClass="year" text="Label" BorderPane.alignment="CENTER" />
          </center>
          <left>
-            <Button fx:id="izquierdaButton" mnemonicParsing="false" text="&lt;" BorderPane.alignment="CENTER" />
+            <Button fx:id="izquierdaButton" mnemonicParsing="false" styleClass="changeButton" text="&lt;" BorderPane.alignment="CENTER" />
          </left>
          <right>
-            <Button fx:id="derechaButton" mnemonicParsing="false" text="&gt;" BorderPane.alignment="CENTER" />
+            <Button fx:id="derechaButton" mnemonicParsing="false" styleClass="changeButton" text="&gt;" BorderPane.alignment="CENTER" />
          </right>
          <BorderPane.margin>
             <Insets bottom="10.0" />
